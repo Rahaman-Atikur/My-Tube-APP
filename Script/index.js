@@ -18,7 +18,8 @@ function loadCategoryVideos(id){
   fetch(url)
   .then((res)=>res.json())
   .then((data)=>{
-    const clickedButton = document.getElementById('btn-${id}');
+    const clickedButton = document.getElementById(`${id}`);
+    console.log(clickedButton);
     clickedButton.classList.add("active");
     displayVideos(data.category)
   
